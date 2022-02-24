@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  monitoring:
+    image: thetinydev/monitoring:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - custom_network
+networks:
+  custom_network:
